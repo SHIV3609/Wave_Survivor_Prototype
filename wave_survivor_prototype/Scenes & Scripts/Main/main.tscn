@@ -29,10 +29,10 @@ albedo_color = Color(0.00392157, 0.4, 0.305882, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_ie2il"]
 material = SubResource("StandardMaterial3D_4ulkk")
-size = Vector3(10, 0.1, 10)
+size = Vector3(30, 0.1, 30)
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_4d0fk"]
-data = PackedVector3Array(-5, 0.05, 5, 5, 0.05, 5, -5, -0.05, 5, 5, 0.05, 5, 5, -0.05, 5, -5, -0.05, 5, 5, 0.05, -5, -5, 0.05, -5, 5, -0.05, -5, -5, 0.05, -5, -5, -0.05, -5, 5, -0.05, -5, 5, 0.05, 5, 5, 0.05, -5, 5, -0.05, 5, 5, 0.05, -5, 5, -0.05, -5, 5, -0.05, 5, -5, 0.05, -5, -5, 0.05, 5, -5, -0.05, -5, -5, 0.05, 5, -5, -0.05, 5, -5, -0.05, -5, 5, 0.05, 5, -5, 0.05, 5, 5, 0.05, -5, -5, 0.05, 5, -5, 0.05, -5, 5, 0.05, -5, -5, -0.05, 5, 5, -0.05, 5, -5, -0.05, -5, 5, -0.05, 5, 5, -0.05, -5, -5, -0.05, -5)
+[sub_resource type="BoxShape3D" id="BoxShape3D_dehuw"]
+size = Vector3(30, 0.1, 30)
 
 [node name="Main" type="Node3D"]
 
@@ -49,7 +49,7 @@ shadow_enabled = true
 mesh = SubResource("BoxMesh_ie2il")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
-shape = SubResource("ConcavePolygonShape3D_4d0fk")
+shape = SubResource("BoxShape3D_dehuw")
 
 [node name="Player" parent="." instance=ExtResource("1_akeom")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.55376, 0)
